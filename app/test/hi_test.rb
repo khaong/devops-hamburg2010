@@ -1,7 +1,8 @@
-require 'hi'
+require 'rubygems'
+
+require File.dirname(__FILE__) + '/../hi'
 require 'test/unit'
 require 'rack/test'
-
 
 
 ENV['RACK_ENV'] = 'test'
@@ -23,7 +24,7 @@ class HiTest < Test::Unit::TestCase
     name = "Simon"
     get "/hello/#{name}"
     assert last_response.ok?
-    puts "** " + last_response.body
+    # puts "** " + last_response.body
     assert last_response.body.include?(name)
   end
 end
