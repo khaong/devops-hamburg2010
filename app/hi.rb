@@ -20,5 +20,4 @@ get '/hello/:name' do
     # params[:name] is 'foo' or 'bar'
     # check trick to make a computer talk
     "Hello #{params[:name]}!"
-    system("say '#{params[:name]}'")
 end
