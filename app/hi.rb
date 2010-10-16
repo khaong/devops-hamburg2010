@@ -1,6 +1,8 @@
 require 'rubygems'
 require 'sinatra'
 
+
+
 get '/' do
   "whut?"
 end
@@ -14,10 +16,14 @@ get '/bye' do
   "Over so soon?"
 end
 
+get '/hello/' do
+  "Hi there!"
+end
+
 
 get '/hello/:name' do
     # matches "GET /hello/foo" and "GET /hello/bar"
     # params[:name] is 'foo' or 'bar'
     # check trick to make a computer talk
-    "Hello #{params[:name]}!"
+    "<html><body>Hello #{params[:name]}!</body></html>"
 end
