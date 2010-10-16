@@ -1,0 +1,4 @@
+App dependencies:
+rack (1.2.1)
+rack-test (0.5.6)
+sinatra (1.0)
