@@ -36,7 +36,7 @@ class DBInstance(object):
         self.allocated_storage = None
         self.endpoint = None
         self.instance_class = None
-        self.master_username = None
+        self.main_username = None
         self.parameter_group = None
         self.security_group = None
         self.availability_zone = None
@@ -78,8 +78,8 @@ class DBInstance(object):
             self.allocated_storage = int(value)
         elif name == 'DBInstanceClass':
             self.instance_class = value
-        elif name == 'MasterUsername':
-            self.master_username = value
+        elif name == 'MainUsername':
+            self.main_username = value
         elif name == 'Port':
             if self._in_endpoint:
                 self._port = int(value)
